@@ -1,33 +1,10 @@
 "use strict";
-// const themeButton = document.getElementById("themeButton");
-// const body = document.body;
 
-// themeButton.addEventListener("click", () => {
-//   body.classList.toggle("dark-theme");
-// });
-// console.log("locale", localStorage.getItem("theme"));
-
-// const storedTheme = localStorage.getItem("theme");
-
-// document.querySelector("select").addEventListener("change", selectChange);
-
-// if (storedTheme === null) {
-//   console.log("NULL NULL");
-//   setTheme("dark");
-// } else {
-//   setTheme(storedTheme);
-// }
-
-// function selectChange(evt) {
-//   setTheme(document.querySelector("select").value);
-//   //   console.log(document.querySelector("select").value);
-// }
-// function setTheme(theme) {
-//   localStorage.setItem("theme", theme);
-//   document.querySelector("body").dataset.theme = theme;
-// }
 const themes = ["light", "dark", "custom"];
 let currentThemeIndex = 0;
+
+let slideIndex = 1;
+let slideshowInterval;
 
 console.log("locale", localStorage.getItem("theme"));
 
@@ -36,7 +13,7 @@ const body = document.body;
 
 if (storedTheme === null || !themes.includes(storedTheme)) {
   console.log("NULL NULL");
-  setTheme("light"); // Default to light theme
+  setTheme("light");
 } else {
   setTheme(storedTheme);
   currentThemeIndex = themes.indexOf(storedTheme);
@@ -56,3 +33,40 @@ function setTheme(theme) {
   localStorage.setItem("theme", theme);
   body.dataset.theme = theme;
 }
+
+function startSlideshow() {
+  showSlides();
+  slideshowInterval = setInterval(showSlides, 4000);
+}
+
+function stopSlideshow() {
+  clearInterval(slideshowInterval);
+}
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slideIndex++;
+
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+}
+
+function checkScreenWidth() {
+  if (window.innerWidth <= 768) {
+    startSlideshow();
+  } else {
+    stopSlideshow();
+  }
+}
+
+checkScreenWidth();
+
+window.addEventListener("resize", checkScreenWidth);
