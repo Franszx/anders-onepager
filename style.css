@@ -79,14 +79,7 @@
   color: var(--landing-8-color);
   box-shadow: -8px -8px 20px var(--landing-5-color), 10px 10px 20px var(--landing-1-color);
 }
-[data-theme="landing"] .neomorphic-container {
-  box-shadow: -5px -5px 10px var(--landing-1-color), 5px 5px 10px var(--landing-3-color);
-}
 
-[data-theme="landing"] .neomorphic-container:hover {
-  transform: translateY(-4px);
-  box-shadow: -10px -10px 20px var(--landing-5-color), 10px 10px 20px var(--landing-6-color);
-}
 [data-theme="landing"] .tooltip {
   background-color: var(--landing-1-color);
 }
