@@ -174,7 +174,7 @@
 
 [data-theme="custom"] .neomorphic-container:hover {
   transform: translateY(-4px);
-  box-shadow: -10px -10px 20px var(--custom-5-color), 10px 10px 20px var(--custom-6-color);
+  box-shadow: -10px -10px 20px var(--custom-7-color), 10px 10px 20px var(--custom-6-color);
 }
 [data-theme="custom"] .tooltip {
   background-color: var(--custom-6-color);
