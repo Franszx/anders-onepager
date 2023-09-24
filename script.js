@@ -31,7 +31,7 @@ function setTheme(theme) {
   body.dataset.theme = theme;
 }
 
-let slideIndex = 1;
+let slideIndex = 0;
 let slideshowInterval;
 
 function startSlideshow() {
