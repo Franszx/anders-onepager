@@ -1,16 +1,101 @@
 @charset "UTF-8";
 :root {
-  --color-white: #ffffff;
-  --color-darkBlue: #202844;
-  --color-darkGrey: #888b8d;
-  --color-lightBeige: #c1a882;
-  --color-grey: #ebebeb;
-  --color-lightGrey: #eaeaea;
-
   --ff-noto-serif-display: "Noto Serif Display", serif;
   --ff-dm-serif-display: "DM Serif Display", serif;
   --ff-dm-sans: "DM Sans", sans-serif;
   --ff-roboto-serif: "Roboto Serif", serif;
+}
+[data-theme="landing"] {
+  --landing-1-color: #f2f2f2;
+  --landing-2-color: #4f5f73;
+  --landing-3-color: #a3a9b0;
+  --landing-4-color: #8c4b45;
+  --landing-5-color: #ccc4c0;
+  --landing-6-color: #5b6470;
+  --landing-7-color: #003366;
+  --landing-8-color: #cbc3ff;
+  --landing-yelloew: #bdc7d6;
+
+  color: var(--landing-7-color);
+  background-color: var(--landing-1-color);
+}
+[data-theme="landing"] :hover a:hover {
+  color: var(--landing-4-color) !important;
+}
+[data-theme="landing"] #byline {
+  color: var(--landing-3-color);
+}
+[data-theme="landing"] .three-picture {
+  border-color: var(--landing-4-color);
+}
+[data-theme="landing"] #navLink-home {
+  color: var(--landing-2-color);
+}
+[data-theme="landing"] .social-links li a {
+  color: var(--landing-3-color);
+}
+
+[data-theme="landing"] .text-highlight {
+  color: var(--landing-2-color);
+}
+[data-theme="landing"] a {
+  color: var(--landing-3-color);
+}
+[data-theme="landing"] p {
+  color: var(--landing-3-color);
+}
+
+[data-theme="landing"] .h1_first {
+  color: var(--landing-3-color);
+}
+[data-theme="landing"] .grid-h3 {
+  color: var(--landing-5-color);
+}
+[data-theme="landing"] .bottomH2 {
+  color: var(--landing-7-color);
+}
+[data-theme="landing"] h1 {
+  color: var(--landing-3-color);
+}
+[data-theme="landing"] .h1-about {
+  color: var(--landing-4-color);
+}
+
+[data-theme="landing"] #copyright {
+  color: var(--landing-3-color);
+}
+[data-theme="landing"] .text-about {
+  color: var(--landing-3-color);
+}
+
+[data-theme="landing"] #themeButton {
+  color: var(--landing-3-color);
+  background: var(--landing-1-color);
+  box-shadow: -5px -5px 15px var(--landing-1-color), 6px 6px 20px var(--landing-5-color);
+}
+[data-theme="landing"] #themeButton:hover {
+  color: var(--landing-8-color);
+  box-shadow: -8px -8px 20px var(--landing-5-color), 10px 10px 20px var(--landing-1-color);
+}
+[data-theme="landing"] .neomorphic-container {
+  box-shadow: -5px -5px 10px var(--landing-7-color), 5px 5px 10px var(--landing-3-color);
+}
+
+[data-theme="landing"] .neomorphic-container:hover {
+  transform: translateY(-4px);
+  box-shadow: -10px -10px 20px var(--landing-5-color), 10px 10px 20px var(--landing-6-color);
+}
+[data-theme="landing"] .tooltip {
+  background-color: var(--landing-6-color);
+}
+[data-theme="landing"] .tooltip p {
+  color: var(--landing-5-color);
+}
+[data-theme="landing"] #footnote :first-child {
+  color: var(--landing-5-color);
+}
+[data-theme="landing"] .profile-picture {
+  border-color: var(--landing-4-color);
 }
 /* ---------------CUSTOM THEME------------------- */
 [data-theme="custom"] {
@@ -101,6 +186,12 @@
 }
 [data-theme="custom"] .tooltip p {
   color: var(--custom-5-color);
+}
+[data-theme="custom"] #footnote :first-child {
+  color: var(--custom-5-color);
+}
+[data-theme="custom"] .profile-picture {
+  border-color: var(--custom-6-color);
 }
 /* -------------------------------------------- */
 
@@ -194,6 +285,9 @@
 [data-theme="dark"] #footnote :first-child {
   color: var(--dark-5-color);
 }
+[data-theme="dark"] .profile-picture {
+  border-color: var(--dark-1-color);
+}
 /* ------------------------------------------- */
 /* ---------------LIGHT THEME------------------ */
 
@@ -273,6 +367,9 @@
 [data-theme="light"] .tooltip p {
   color: var(--light-5-color);
 }
+[data-theme="light"] .profile-picture {
+  border-color: var(--light-5-color);
+}
 
 /* --------------------------------------------- */
 #themeButton {
@@ -314,7 +411,10 @@ main {
   max-width: 1280px;
   margin-bottom: 4rem;
 }
-
+.rapper-sec {
+  margin: auto;
+  max-width: 1280px;
+}
 @media screen and (min-width: 900px) {
   main {
     margin-bottom: 12rem;
@@ -333,8 +433,7 @@ h1 {
 }
 .h1-contact {
   font-size: 1.8rem;
-  font-weight: 400;
-  color: var(--color-darkGrey);
+  font-weight: 600;
   margin-bottom: 0.5rem;
   letter-spacing: 0.025em;
 }
@@ -351,7 +450,7 @@ h1 {
 .bottomH2 {
   font-family: var(--ff-noto-serif-display);
   font-size: 1.5rem;
-  font-weight: 100;
+  font-weight: 300;
   font-style: italic;
 }
 .grid-h3 {
@@ -517,7 +616,7 @@ nav {
   text-align: left;
   max-width: 1088px;
   margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .about-section h1 {
@@ -533,17 +632,12 @@ nav {
 .text-about {
   font-family: var(--ff-dm-sans);
   font-size: 1.3rem;
-  font-weight: 200;
+  font-weight: 400;
   line-height: 1.5em;
   margin-bottom: 0.5rem;
   letter-spacing: 0.025em;
 }
 @media screen and (min-width: 900px) {
-  .about-section {
-    margin-bottom: 16rem;
-    padding: 10rem 0;
-  }
-
   .about-section h1 {
     position: absolute;
     top: 45%;
@@ -624,7 +718,12 @@ nav {
     margin-bottom: 2rem;
   }
   .about-section {
-    padding: 5rem 1.5rem;
+    padding-top: 5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .rapper-sec {
+    padding-bottom: 5rem;
   }
 }
 
@@ -706,6 +805,11 @@ footer .social-links {
   text-align: center;
   padding: 0 10px;
 }
+.slide2 {
+  display: block;
+  text-align: center;
+  padding: 0 10px;
+}
 
 @media screen and (min-width: 768px) {
   .picture-flex {
@@ -734,6 +838,9 @@ footer .social-links {
     justify-content: space-between;
   }
 }
+.card-a {
+  margin: 1rem 1rem;
+}
 .ui-card {
   position: relative;
   display: inline-block;
@@ -745,7 +852,6 @@ footer .social-links {
 .neomorphic-container {
   padding: 20px;
   box-shadow: -5px -5px 10px rgba(255, 255, 255, 1), 5px 5px 10px rgba(0, 0, 0, 0.1);
-  margin: 1rem;
 }
 .neomorphic-container {
   border-radius: 10px;
@@ -784,6 +890,7 @@ footer .social-links {
   transition: opacity 0.3s;
 }
 .profile-picture {
+  border: solid 1px black;
   width: 4rem;
   float: right;
   border-radius: 50%;
