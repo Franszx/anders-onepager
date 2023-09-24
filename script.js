@@ -71,7 +71,7 @@ checkScreenWidth();
 
 window.addEventListener("resize", checkScreenWidth);
 
-let slideIndex2 = 1;
+let slideIndex2 = 0;
 let slideshowInterval2;
 
 function startSecondSlideshow() {
