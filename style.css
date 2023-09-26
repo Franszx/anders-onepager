@@ -4,21 +4,20 @@
   --ff-quicksand: "Quicksand", sans-serif;
 }
 [data-theme="landing"] {
-  --landing-1-color: #e8e6da;
-  --landing-2-color: #4f5f73;
-  --landing-3-color: #a3a9b0;
   --landing-4-color: #c54f00;
   --landing-5-color: #ccc4c0;
-  --landing-6-color: #5b6470;
-  --landing-7-color: black;
-  --landing-8-color: #cbc3ff;
-  --landing-yelloew: #bdc7d6;
+  --landing-6-color: #e8720c;
+  --landing-7-color: rgba(51, 49, 47, 1);
+
   --rgba-color: rgba(233, 222, 198, 1);
 
   color: var(--landing-4-color);
   background-color: var(--rgba-color);
 }
 [data-theme="landing"] :hover a:hover {
+  color: var(--landing-7-color) !important;
+}
+[data-theme="landing"] .underline-bigLink:hover {
   color: var(--landing-4-color) !important;
 }
 [data-theme="landing"] #byline {
@@ -35,13 +34,13 @@
 }
 
 [data-theme="landing"] .text-highlight {
-  color: var(--landing-4-color);
+  color: var(--landing-6-color);
 }
 [data-theme="landing"] a {
   color: var(--landing-7-color);
 }
 [data-theme="landing"] p {
-  color: var(--landing-7-color);
+  color: var(--landing-6-color);
 }
 
 [data-theme="landing"] .h1_first {
@@ -66,7 +65,7 @@
   color: var(--landing-4-color);
 }
 [data-theme="landing"] .text-about {
-  color: var(--landing-7-color);
+  color: var(--landing-4-color);
 }
 
 [data-theme="landing"] #themeButton {
@@ -79,18 +78,20 @@
   box-shadow: -8px -8px 20px var(--landing-5-color), 10px 10px 20px var(--rgba-color);
 }
 
+[data-theme="landing"] .social-links-footer a {
+  color: var(--landing-7-color);
+}
+
 [data-theme="landing"] .tooltip {
   background-color: var(--landing-7-color);
 }
 [data-theme="landing"] .tooltip p {
-  color: var(--landing-2-color);
+  color: var(--landing-7-color);
 }
 [data-theme="landing"] #footnote :first-child {
   color: var(--landing-7-color);
 }
-[data-theme="landing"] .profile-picture {
-  border-color: var(--landing-4-color);
-}
+
 /* ---------------CUSTOM THEME------------------- */
 
 /* --------------DARK THEME---------------- */
@@ -224,24 +225,24 @@ body {
   background-color: var(--color-white);
   font-size: 16px;
   font-family: var(--ff-quicksand);
-  padding: 1rem 0rem;
+  padding-top: 1rem;
   margin: 0;
 }
 
 main {
   margin: auto;
-  max-width: 1280px;
+  max-width: 1388px;
   margin-bottom: 4rem;
 }
 /* HEADER & FOOTER */
 header {
   margin: auto;
-  max-width: 1088px;
+  max-width: 1388px;
   margin-bottom: 4rem;
 }
 section {
   margin: auto;
-  max-width: 1088px;
+  max-width: 1388px;
   margin-bottom: 5rem;
 }
 .mobile-padding-centered {
@@ -252,6 +253,7 @@ section {
 
 footer {
   margin: auto;
+
   max-width: 1388px;
 }
 .rapper-sec {
@@ -388,24 +390,31 @@ nav {
 }
 .underline-link {
   text-decoration: none;
-  color: #333;
+  color: var(--landing-7-color);
   position: relative;
+}
+.underline-bigLink {
+  text-decoration: none;
+  color: var(--landing-7-color);
+  position: relative;
+}
+.underline-bigLink:hover::before {
+  color: var(--landing-4-color);
 }
 .underline-link::before {
   content: "";
   position: absolute;
-  color: black;
+  color: var(--landing-7-color);
   bottom: -3px;
   left: 0;
   width: 0;
   height: 4px;
-  background-color: black;
-  transition: width 0.3s ease; /* Apply a smooth transition to the width property */
+  background-color: var(--landing-7-color);
+  transition: width 0.3s ease;
 }
 
-/* Define the hover effect */
 .underline-link:hover::before {
-  width: 100%; /* When hovered, expand the line to 100% width */
+  width: 100%;
 }
 @media screen and (min-width: 900px) {
   nav {
@@ -444,13 +453,24 @@ nav {
 .site-utility .social-links {
   margin-right: 3rem;
 }
-
+.site-utility .social-links-footer {
+  margin-right: 1rem;
+}
 .social-links {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .social-links li {
+  margin-right: 1rem;
+  text-decoration: none;
+}
+.social-links-footer {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.social-links-footer li {
   margin-right: 1rem;
   text-decoration: none;
 }
@@ -472,8 +492,28 @@ nav {
 .site-utility .social-links {
   display: none;
 }
+.social-links-footer li {
+  margin-right: 2rem;
+}
+
+.social-links-footer li:last-of-type {
+  margin-right: 0;
+}
+.social-links-footer li a {
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1em;
+  text-decoration: none;
+}
+
+.site-utility .social-links-footer {
+  display: none;
+}
 @media screen and (min-width: 900px) {
   .site-utility .social-links {
+    display: inline-flex;
+  }
+  .site-utility .social-links-footer {
     display: inline-flex;
   }
 }
@@ -544,7 +584,7 @@ nav {
   }
   .mobile-padding-footer {
     margin-top: 10rem;
-    margin-bottom: 1rem;
+    padding: 3rem 1rem;
   }
   .mobile-padding-flex {
     margin-top: 10rem;
@@ -649,7 +689,7 @@ footer .social-links {
   width: 60%;
   border-radius: 50%;
   height: auto;
-  border: 5px solid black;
+  border: 5px solid var(--landing-7-color);
   opacity: 0.7;
   background-color: var(--landing-4-color);
 }
@@ -709,7 +749,7 @@ footer .social-links {
   margin: 2rem;
 }
 .ui-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 .ui-card img {
   max-width: 100%;
@@ -725,7 +765,7 @@ footer .social-links {
 .card-description {
   font-size: 1rem;
   color: black;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 .card-button {
   display: inline-block;
@@ -735,12 +775,14 @@ footer .social-links {
   padding: 8px 16px;
   border-radius: 4px;
   text-decoration: none;
-  transition: black 0.2s ease;
+  transition: var(--landing-7-color) 0.5s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .card-button:hover {
-  border: solid 1px black;
+  border: solid 1px var(--landing-7-color);
   background-color: var(--rgba-color);
+  margin: 0;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
