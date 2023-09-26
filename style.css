@@ -42,7 +42,7 @@
 }
 
 [data-theme="landing"] .text-highlight {
-  color: var(--landing-6-color);
+  color: var(--landing-4-color);
 }
 [data-theme="landing"] a {
   color: var(--landing-7-color);
@@ -52,7 +52,7 @@
 }
 
 [data-theme="landing"] .h1_first {
-  color: var(--landing-4-color);
+  color: var(--landing-6-color);
 }
 [data-theme="landing"] .grid-h3 {
   color: var(--landing-7-color);
@@ -61,10 +61,10 @@
   color: var(--landing-7-color);
 }
 [data-theme="landing"] h1 {
-  color: var(--landing-4-color);
+  color: var(--landing-6-color);
 }
 [data-theme="landing"] .h1-about {
-  color: var(--landing-4-color);
+  color: var(--landing-6-color);
 }
 [data-theme="landing"] .title-h3 {
   color: var(--landing-7-color);
@@ -73,7 +73,7 @@
   color: var(--landing-4-color);
 }
 [data-theme="landing"] .text-about {
-  color: var(--landing-4-color);
+  color: var(--landing-6-color);
 }
 
 [data-theme="landing"] #themeButton {
