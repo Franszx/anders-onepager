@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="imgs/faviconAnders.png" />
     <link rel="stylesheet" href="style.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,600;9..40,800;9..40,1000&family=DM+Serif+Display&family=Noto+Serif+Display:wght@100;200;300;400;600;800;900&family=Roboto+Serif:ital,opsz,wght@0,8..144,200;0,8..144,800;1,8..144,200&display=swap");
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&family=Urbanist:wght@100;400;700;900&display=swap" rel="stylesheet" />
+
     <script type="module" src="script.js"></script>
     <title>Anders Lindberg</title>
   </head>
@@ -19,9 +20,9 @@
       </div>
       <div class="site-utility">
         <ul class="social-links">
-          <li><a href="https://www.linkedin.com/in/anderslindberg03/">LinkedIn</a></li>
-          <li><a href="https://github.com/Franszx/">Github</a></li>
-          <li><a href="mailto:anderslindberg999@gmail.com">Email</a></li>
+          <li><a class="underline-link" href="https://www.linkedin.com/in/anderslindberg03/">LinkedIn</a></li>
+          <li><a class="underline-link" href="https://github.com/Franszx/">Github</a></li>
+          <li><a class="underline-link" href="mailto:anderslindberg999@gmail.com">Email</a></li>
         </ul>
         <picture>
           <img class="profile-picture" src="imgs/anders1.webp" alt="A headshot of Anders" />
@@ -29,7 +30,8 @@
       </div>
     </nav>
     <header class="mobile-padding">
-      <h1 class="h1_first"><span class="text-highlight">Hi, I'm Anders. - a Frontend developer and Designer.</span> I study frontend design at KEA and I'm looking for a internship.</h1>
+      <h1 class="h1_first"><span class="text-highlight">Hi, I'm Anders.</span> — a Frontend developer and Designer.</h1>
+      <h2>I study frontend design at KEA and I'm looking for a internship.</h2>
     </header>
     <main>
       <section class="picture-flex">
@@ -55,64 +57,39 @@
       </section>
       <section class="grid-container">
         <section class="grid-column">
-          <a class="card-a" href="https://bonsaihjoernet.netlify.app/">
-            <div class="ui-card">
-              <div class="neomorphic-container">
-                <img class="neomorphic-image" src="imgs/bonsaiHjornet-1.webp" alt="a screenshot of a frontpage" />
-                <div class="mobile-only">
-                  <h3 class="title-h3">Bonsaihjornet.dk</h3>
-                  <p>Redesign - Webpage</p>
-                </div>
-                <div class="tooltip">
-                  <h3 class="grid-h3">Bonsaihjornet.dk</h3>
-                  <p>Redesign - Webpage</p>
-                </div>
-              </div>
+          <div class="ui-card">
+            <img class="neomorphic-image" src="imgs/bonsaiHjornet-1.webp" alt="a screenshot of a frontpage" />
+            <div class="card-content">
+              <h2 class="card-title">Bonsaihjørnet.dk</h2>
+              <p class="card-description">Redesign - Webpage</p>
+              <a class="card-a" href="https://bonsaihjoernet.netlify.app/"> <button class="card-button">read more</button></a>
             </div>
-          </a>
-          <a class="card-a" href="">
-            <div class="ui-card">
-              <div class="neomorphic-container">
-                <img class="neomorphic-image" src="imgs/royal-escp.webp" alt="a screenshot of a Campaignsite" />
-                <div class="mobile-only">
-                  <h3 class="title-h3">Royal Escapes</h3>
-                  <p>Campaignsite</p>
-                </div>
-                <div class="tooltip">
-                  <h3 class="grid-h3">Royal Escapes</h3>
-                  <p>Campaignsite</p>
-                </div>
-              </div>
+          </div>
+
+          <div class="ui-card">
+            <img class="neomorphic-image" src="imgs/royal-escp.webp" alt="a screenshot of a Campaignsite" />
+            <div class="card-content">
+              <h2 class="card-title">Royal Escapes</h2>
+              <p class="card-description">Campaignsite</p>
+              <a class="#"> <button class="card-button">read more</button></a>
             </div>
-          </a>
+          </div>
         </section>
         <section class="grid-column">
-          <a class="card-a" href="https://github.com/Franszx/kune-festival/tree/navbranchanders">
-            <div class="ui-card">
-              <div class="neomorphic-container">
+               <div class="ui-card">
                 <img class="neomorphic-image" src="imgs/kuneFestival.webp" alt="A screenshot of a webpage" />
-                <div class="mobile-only">
-                  <h3 class="title-h3">Kune festival</h3>
-                  <p>Redesign - webpage</p>
-                </div>
-                <div class="tooltip">
-                  <h3 class="grid-h3">Kune festival</h3>
-                  <p>Redesign - webpage</p>
+                <div class="card-content">
+                  <h2 class="card-title">Kune festival</h2>
+                  <p class="card-description">Redesign - Webpage</p>
+                  <a class="card-a" href="https://github.com/Franszx/kune-festival/tree/navbranchanders"> <button class="card-button">read more</button></a>
                 </div>
               </div>
-            </div>
-          </a>
-          <a class="card-a" href="https://franszx.github.io/portfolio_eksamen.t6/index.html">
-            <div class="ui-card">
-              <div class="neomorphic-container">
-                <img class="neomorphic-image" src="imgs/portfolio-2.webp" alt="a screenshot of a portfolio" />
-                <div class="mobile-only">
-                  <h3 class="title-h3">Portfolio</h3>
-                  <p>Jan 23</p>
-                </div>
-                <div class="tooltip">
-                  <h3 class="grid-h3">Portfolio</h3>
-                  <p>Jan 23</p>
+              <div class="ui-card">
+                <img class="neomorphic-image" src="imgs/portfolio-2.webp" alt="a screenshot of a frontpage" />
+                <div class="card-content">
+                  <h2 class="card-title">Semester 1</h2>
+                  <p class="card-description">Portfolio</p>
+                  <a class="card-a" href="https://franszx.github.io/portfolio_eksamen.t6/index.html"> <button class="card-button">read more</button></a>
                 </div>
               </div>
             </div>
@@ -143,26 +120,25 @@
     </div>
     <section class="mobile-padding">
       <h1 class="h1-contact">
-        <span class="text-highlight">Contact - </span> I'm eager to learn and contribute to your team. Please feel free to reach out to me via <a href="mailto:anderslindberg999@gmail.com">email</a> or connect with me on
-        <a href="https://www.linkedin.com/in/anderslindberg03/" target="_blank">linkedIn</a>
+        <span class="text-highlight">Contact - </span> I'm eager to learn and contribute to your team. Please feel free to reach out to me via <a class="underline-bigLink" href="mailto:anderslindberg999@gmail.com">email</a> or connect with me on
+        <a class="underline-bigLink" href="https://www.linkedin.com/in/anderslindberg03/" target="_blank">linkedIn</a>
       </h1>
     </section>
-    <section class="mobile-padding-margin-0">
-      <h2 class="bottomH2">"Already at the bottom!? well, try this awesome designed color theme switcher button then"</h2>
-    </section>
     <section class="mobile-padding-centered">
-      <button id="themeButton">button</button>
+      <button id="themeButton">cool button</button>
     </section>
 
-    <footer class="mobile-padding">
-      <ul class="social-links">
-        <li><a href="https://www.linkedin.com/in/anderslindberg03/">LinkedIn</a></li>
-        <li><a href="https://github.com/Franszx/">Github</a></li>
-        <li><a href="mailto:anderslindberg999@gmail.com">Email</a></li>
-      </ul>
+    <footer class="mobile-padding-footer">
       <div id="footnote">
         <p>Designed and Developed by Anders Lindberg</p>
         <p id="copyright">&copy; 2023 Anders</p>
+      </div>
+      <div class="site-utility">
+        <ul class="social-links">
+          <li><a class="underline-link" href="https://www.linkedin.com/in/anderslindberg03/">LinkedIn</a></li>
+          <li><a class="underline-link" href="https://github.com/Franszx/">Github</a></li>
+          <li><a class="underline-link" href="mailto:anderslindberg999@gmail.com">Email</a></li>
+        </ul>
       </div>
     </footer>
   </body>

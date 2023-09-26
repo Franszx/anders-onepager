@@ -1,6 +1,6 @@
 "use strict";
 
-const themes = ["landing", "light", "dark", "custom"];
+const themes = ["landing", "dark"];
 let currentThemeIndex = 0;
 
 console.log("locale", localStorage.getItem("theme"));
