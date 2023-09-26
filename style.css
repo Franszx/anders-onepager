@@ -2,11 +2,19 @@
 :root {
   --ff-urbanist: "Urbanist", sans-serif;
   --ff-quicksand: "Quicksand", sans-serif;
+  --fw-urban-thin: 100;
+  --fw-urban-reg: 400;
+  --fw-urban-bold: 700;
+  --fw-urban-black: 900;
+  --fw-quick-light: 300;
+  --fw-quick-reg: 400;
+  --fw-quick-semibold: 600;
+  --fw-quick-bold: 700;
 }
 [data-theme="landing"] {
   --landing-4-color: #c54f00;
   --landing-5-color: #ccc4c0;
-  --landing-6-color: #e8720c;
+  --landing-6-color: #cc7139;
   --landing-7-color: rgba(51, 49, 47, 1);
 
   --rgba-color: rgba(233, 222, 198, 1);
@@ -268,17 +276,17 @@ footer {
 }
 h1 {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: var(--fw-urban-reg);
   color: var(--color-lightBeige);
   margin-bottom: 0.5rem;
 }
 .h1_first {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: var(--fw-urban-black);
 }
 .h1-contact {
   font-size: 1.8rem;
-  font-weight: 600;
+  font-weight: var(--fw-urban-bold);
   margin-bottom: 0.5rem;
   letter-spacing: 0.025em;
 }
@@ -424,8 +432,8 @@ nav {
 
 #navLink-home {
   font-family: var(--ff-urbanist);
-  font-size: 1rem;
-  font-weight: 800;
+  font-size: 1.1rem;
+  font-weight: var(--fw-urban-bold);
   text-decoration: none;
   line-height: 1rem;
 }
@@ -523,13 +531,12 @@ nav {
   margin: auto;
   position: relative;
   text-align: left;
-  max-width: 1088px;
+  max-width: 1388px;
   margin-top: 4rem;
   margin-bottom: 2rem;
 }
 
 .about-section h1 {
-  font-family: var(--ff-noto-serif-display);
   font-weight: 400;
   position: absolute;
   top: 50%;
@@ -539,8 +546,8 @@ nav {
   opacity: 0.1;
 }
 .text-about {
-  font-family: var(--ff-dm-sans);
-  font-size: 1.3rem;
+  font-family: var(--ff-quicksand);
+  font-size: 1.333rem;
   font-weight: 400;
   line-height: 1.5em;
   margin-bottom: 0.5rem;
