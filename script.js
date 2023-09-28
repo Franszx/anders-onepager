@@ -59,54 +59,38 @@ function showSlides() {
   slides[slideIndex - 1].style.display = "block";
 }
 
-function checkScreenWidth() {
-  if (window.innerWidth <= 768) {
-    startSlideshow();
+startSlideshow();
+
+// Your existing JavaScript code
+
+// Add this code to handle the background color change
+// const navbarLinks = document.querySelectorAll(".social-links-footer a");
+
+// const linkColors = ["#0966c1", "#1f2328", "transparent"];
+
+// const defaultBgColors = ["#f2f2f2", "#2f2f2e", "transparent"];
+
+// navbarLinks.forEach((link, index) => {
+//   link.addEventListener("mouseover", () => {
+//     document.body.style.backgroundColor = linkColors[index];
+//   });
+
+//   link.addEventListener("mouseout", () => {
+//     document.body.style.backgroundColor = defaultBgColors[currentThemeIndex];
+//   });
+// });
+const button = document.getElementById("themeButton");
+let isClicked = false;
+
+button.addEventListener("click", () => {
+  if (isClicked) {
+    // Revert to the original text
+    button.innerText = "I made a dark theme";
   } else {
-    stopSlideshow();
-  }
-}
-
-checkScreenWidth();
-
-window.addEventListener("resize", checkScreenWidth);
-
-let slideIndex2 = 0;
-let slideshowInterval2;
-
-function startSecondSlideshow() {
-  showSecondSlides();
-  slideshowInterval2 = setInterval(showSecondSlides, 4000);
-}
-
-function stopSecondSlideshow() {
-  clearInterval(slideshowInterval2);
-}
-
-function showSecondSlides() {
-  let slides2 = document.getElementsByClassName("slide2");
-
-  for (let i = 0; i < slides2.length; i++) {
-    slides2[i].style.display = "none";
+    // Change the text when clicked
+    button.innerText = "Back!";
   }
 
-  slideIndex2++;
-
-  if (slideIndex2 > slides2.length) {
-    slideIndex2 = 1;
-  }
-
-  slides2[slideIndex2 - 1].style.display = "block";
-}
-
-function checkSecondScreenWidth() {
-  if (window.innerWidth <= 768) {
-    startSecondSlideshow();
-  } else {
-    stopSecondSlideshow();
-  }
-}
-
-checkSecondScreenWidth();
-
-window.addEventListener("resize", checkSecondScreenWidth);
+  // Toggle the clicked state
+  isClicked = !isClicked;
+});
