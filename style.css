@@ -764,9 +764,14 @@ nav {
   margin: auto;
   margin-bottom: 5rem;
 }
+@media screen and (min-width: 900px) {
+  .about-padding {
+    padding: 1rem 1.5rem;
+  }
+}
 @media screen and (max-width: 1183px) {
   .about-padding {
-    padding: 0 1.5rem;
+    padding: 1rem 1.5rem;
   }
 }
 #about-section {
@@ -779,26 +784,20 @@ nav {
 
   & h1 {
     font-weight: 800;
-    position: absolute;
-    top: 1%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 8rem;
-    opacity: 0.1;
+    font-size: var(--font-size-headline);
   }
 
   @media screen and (min-width: 900px) {
-    #about-section h1 {
+    #about-section:has h1 {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      position: absolute;
-      top: 30%;
-      left: 10%;
-      transform: translate(-50%, -50%);
       font-size: 30rem;
       font-weight: var(--fw-urban-bold);
       opacity: 0.1;
+    }
+    .about-section {
+      padding: 1rem 1.5rem;
     }
   }
 }
@@ -839,7 +838,6 @@ nav {
     justify-content: space-between;
     margin-top: 4rem;
     margin-bottom: 2rem;
-    padding: 0;
   }
   .second-about-div {
     display: flex;
@@ -890,16 +888,17 @@ nav {
 }
 
 @media screen and (min-width: 900px) {
-  .about-section {
-    padding: 0rem 1.5rem;
-  }
   .mobile-padding-cv {
     margin-bottom: 1.5rem;
     padding: 0rem 1.5rem;
   }
   .mobile-padding {
+    padding: 1rem 1.5rem;
     margin-top: 10rem;
     margin-bottom: 8rem;
+  }
+  .mobile-padding-nav {
+    padding: 1rem 1.5rem;
   }
   .mobile-padding-footer {
     margin-top: 10rem;
